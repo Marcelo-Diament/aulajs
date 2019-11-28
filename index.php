@@ -1,5 +1,5 @@
 <?php require_once("inc/head.php"); ?>
-    <title>Prática em Aula de JS</title>
+    <title>Prática em Aula de JavaScript</title>
 </head>
 <body>
     <?php require_once("inc/header.php"); ?>
