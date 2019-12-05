@@ -1,9 +1,7 @@
 // window.onload = function() {
 
 // Boas vindas com aplicação de estilo no console (funciona apenas no Chrome e Firefox - dependendo da versão)
-console.log(
-    '%cSEJA MUITO BEM %cVINDX', 'background:#f15722; color: #fff; font-size: 50px', 'background:yellowgreen; color: #000; font-size: 50px; text-transform: uppercase;'
-)
+console.log( '%cSEJAM MUITO\n%cBEM VINDOS', 'background:#f15722; color: #fff; font-size: 50px', 'background:yellowgreen; color: #000; font-size: 50px; text-transform: uppercase;')
 
 // prompt() é uma função nativa do JS que interage com o usuário através do próprio browser (semelhante ao alert e ao confirm).
 // Podemos atrelar o valor inserido no input pelo usuário a uma variável, como no exemplo a seguir:
@@ -17,7 +15,7 @@ if (nome) {
 console.log('%c' + nome + '!', 'background:#000; color: #fff; font-size: 50px; text-transform: uppercase;')
 
 // Exibição de imagem - há restrições quanto às propriedades aceitas no console, por isso trataremos mais como texto do que como imagem
-console.log('%c ', 'background: url("https://avatars0.githubusercontent.com/u/56034918?s=460&v=4"); background-attachment: fixed; background-position: top; line-height: 120px; font-size: 240px; color: transparent; text-transform: uppercase;')
+console.log('%c ', 'background: url("https://previews.123rf.com/images/oksancia/oksancia1307/oksancia130704342/21263924-pastel-blue-fabric-ikat-diamond-seamless-pattern-background.jpg"); background-attachment: fixed; background-position: top; line-height: 240px; font-size: 480px; color: transparent; text-transform: uppercase;')
 
 // Variáveis
 
@@ -153,20 +151,26 @@ formTitulo.style.color = '#f15722'
 
 // Funções
 
+document.querySelector('#labelNovaTarefa').append('do ' + nome)
+
 const confirmarAdicao = function () {
-    adicionar = confirm('Ei!\nVocê vai adicionar a tarefa: "' + novaTarefa.value + '", ok?\n\nTarefa dada é tarefa cumprida!')
-    if (adicionar != false) {
-        console.log('Vamos adicionar sua tarefa...\n\nPrimeiro, vamos capturar a tarefa (texto):\n')
-        console.log('novaTarefa.value: ' + novaTarefa.value + '\n')
-        console.log('Agora é só incluirmos dentro de uma nova \<li> na nossa \<ul>:\n')
-        novoItem = document.createElement('li')
-        novoItem.innerText = novaTarefa.value
-        document.querySelector('#tarefasLista').appendChild(novoItem)
-        console.log('\nnovoItem = document.createElement(\'li\')\n')
-        console.log('\nnovoItem.innerText = novaTarefa.value\n')
-        console.log('\ndocument.querySelector(\'#tarefasLista\').appendChild(novoItem)\n')
-        console.log('\nE por fim, limpar nosso campo com novaTarefa.value = \'\'')
-        novaTarefa.value = ''
+    if(document.querySelector('#aceite').checked){
+        adicionar = confirm('Ei!\nVocê vai adicionar a tarefa: "' + novaTarefa.value + '", ok?\n\nTarefa dada é tarefa cumprida!')
+        if (adicionar != false) {
+            console.log('Vamos adicionar sua tarefa...\n\nPrimeiro, vamos capturar a tarefa (texto):\n')
+            console.log('novaTarefa.value: ' + novaTarefa.value + '\n')
+            console.log('Agora é só incluirmos dentro de uma nova \<li> na nossa \<ul>:\n')
+            novoItem = document.createElement('li')
+            novoItem.innerText = novaTarefa.value
+            document.querySelector('#tarefasLista').appendChild(novoItem)
+            console.log('\nnovoItem = document.createElement(\'li\')\n')
+            console.log('\nnovoItem.innerText = novaTarefa.value\n')
+            console.log('\ndocument.querySelector(\'#tarefasLista\').appendChild(novoItem)\n')
+            console.log('\nE por fim, limpar nosso campo com novaTarefa.value = \'\'')
+            novaTarefa.value = ''
+        }
+    } else {
+        alert('É necessário estar de acordo com as políticas!')
     }
 }
 

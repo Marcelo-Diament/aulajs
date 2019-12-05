@@ -47,7 +47,7 @@
             <article id="tarefasFormArticle">
                 <form action="" method="post" id="tarefasForm">
                     <div class="form-group">
-                        <label for="novaTarefa">Nova Tarefa</label>
+                        <label for="novaTarefa" id="labelNovaTarefa">Nova Tarefa</label>
                         <input type="text" class="form-control" id="novaTarefa" name="novaTarefa" aria-describedby="novaTarefaHelp" placeholder="Nova Tarefa">
                         <small id="novaTarefaHelp" class="form-text text-muted">Insira sua nova tarefa.</small>
                     </div>
