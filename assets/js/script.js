@@ -118,14 +118,14 @@ itensCarousel.forEach(element => {
 
 });
 
-sessoes = document.querySelectorAll('section')
-console.log('\nsessoes: ' + sessoes + '\n')
-console.log('\nsessoes.length: ' + sessoes.length + '\n')
-var i = 0
-while (i < sessoes.length) {
-    console.log('Rodada dentro do loop while: ' + i)
-    i++
-}
+    sessoes = document.querySelectorAll('section')
+    console.log('\nsessoes: ' + sessoes + '\n')
+    console.log('\nsessoes.length: ' + sessoes.length + '\n')
+    var i = 0
+    while (i < sessoes.length) {
+        console.log('Rodada dentro do loop while: ' + i)
+        i++
+    }
 
 // /Manipulando HTML e CSS
 
